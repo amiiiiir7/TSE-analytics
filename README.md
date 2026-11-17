@@ -48,7 +48,7 @@ pip install -r requirements.txt
 ## Run
 
 ```bash
-python explore_price.py
+python examples/explore_price.py
 ```
 
 The current example retrieves historical price data for the Iranian stock symbol `خودرو`.
