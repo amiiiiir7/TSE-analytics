@@ -1,9 +1,9 @@
 import jdatetime
-from tse_analytics.windows import window_start_dates
+from tse_analytics.windows import calculation_windows
 
 
-def test_window_start_dates():
-    result = window_start_dates(jdatetime.date(1405, 8, 24))
+def test_calculation_windows():
+    result = calculation_windows(jdatetime.date(1405, 8, 24))
     assert result == {
         "1m": "1405-07-24",
         "3m": "1405-05-24",
@@ -12,8 +12,8 @@ def test_window_start_dates():
     }
 
 
-def test_window_start_dates_crosses_year():
-    result = window_start_dates(jdatetime.date(1405, 2, 10))
+def test_calculation_windows_crosses_year():
+    result = calculation_windows(jdatetime.date(1405, 2, 10))
     assert result == {
         "1m": "1405-01-10",
         "3m": "1404-11-10",
